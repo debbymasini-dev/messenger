@@ -1,0 +1,28 @@
+{
+  "name": "render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/bebas-neue": "^5.3.0",
+    "@fontsource/chakra-petch": "^5.3.0",
+    "@fontsource/cinzel": "^5.3.0",
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/league-gothic": "^5.3.0",
+    "@fontsource/noto-color-emoji": "^5.3.2",
+    "@fontsource/oswald": "^5.3.0",
+    "@fontsource/permanent-marker": "^5.3.0",
+    "@fontsource/special-elite": "^5.3.0",
+    "playwright": "^1.63.0",
+    "@fontsource/fredoka": "^5.3.0",
+    "@fontsource/dancing-script": "^5.3.0",
+    "@fontsource/quicksand": "^5.3.0",
+    "@twemoji/svg": "^15.0.0"
+  }
+}
