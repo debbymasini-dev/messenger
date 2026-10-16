@@ -54,7 +54,13 @@ Gli emoji a colori non escono in Chromium headless: render.js li sostituisce con
   - Scaricare: nel browser `fetch(url)` → canvas → `toDataURL('image/jpeg',.88)` e restituisci `ID=k;W=;H=;C=;P=;<base64>;PAD`; massimo 2 immagini per chiamata. L'output finisce in un file tool-results: decodifica separando su `ID=` e togliendo i caratteri non base64.
   - GIF: cerca `"<film> gif"`, tieni solo `images.orig.url` che finisce in `.gif`, < 3 MB, senza watermark o sottotitoli. Nella mail la GIF va linkata dall'URL pinimg (aggiungi la chiave in `GIFURL` di build.py) e lo still del primo frame va salvato in `assets/gif-DDMM.jpg`.
 - Taglia via scritte e loghi delle foto (crop). Crediti dei pin SOLO nel footer della newsletter, mai su WA/storia.
-- Se il Browser pane non risponde (computer spento o app chiusa): NON programmare kit senza foto. Prepara temi, testi e date, segnali a registro "FOTO DA PRENDERE" e avvisa Gipsy.
+- Se il Browser pane non risponde (computer spento o app chiusa) si usa la **via cloud** (collaudata il 16/10/2026):
+  - Foto dei collaboratori (prima scelta per piercing e PMU): Drive "Foto artisti (per Canva)" → cartelle `Rebecca piercing`, `Federica` (file federica-NN-pmu.jpg), `Sfregio_lttr`. Zapier Google Drive, code action `folder_thumbnails_base64` (folder_id, size 160, offset/count 15) per il provino, `thumbnails_by_ids_base64` (size 1400) per le foto scelte. Togliere i loghi di Federica col crop.
+  - Ricerca Pinterest: TinyFish `fetch_content` su `https://www.pinterest.com/search/pins/?q=…` con `image_links: true` e `include_selectors: ["#__PWS_ROOT__"]` → URL i.pinimg.com (236x/474x/736x/originals; le GIF hanno originals `.gif`).
+  - Scaricare da pinimg: code action Zapier `contact_sheet_from_urls` (Slides → PDF): `mode: grid` (max ~17 URL) per il provino, poi `pdftoppm`; `mode: single` per le immagini scelte, poi `pdfimages -all` estrae i JPG originali in ordine.
+  - L'output grande finisce in un file tool-results: decodifica con python (`pdf_base64` o `items[].base64`).
+  - I nomi dei pinner non si ricavano da qui: nei crediti si scrive "Pinterest".
+- Solo se anche la via cloud fallisce: NON programmare kit senza foto. Prepara temi, testi e date, segnali a registro "FOTO DA PRENDERE" e avvisa Gipsy.
 
 ## 5. Tela Claude Design
 
