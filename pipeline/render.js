@@ -7,6 +7,20 @@ const SP = process.env.KIT_SP || '/tmp/kit';
 const A = SP + '/assets/';
 const FS = SP + '/render/node_modules/@fontsource/';
 const blobs = {
+'50072525f00f756537f049d460af3ff9': 'nt1.jpg',
+'da65d05274479955d930a12c3f8236e3': 'nt3.jpg',
+'78f06bf5a11d63d8eb2a13600e4097c2': 'nt4.jpg',
+'0ff7d2199d0191cabbec9009c808ce57': 'nt5.jpg',
+'d709d137b9d456ce9b6761526e9c5613': 're1.jpg',
+'98871a55ece02e471745ff8a30398a89': 're2.jpg',
+'c6352e9e53042db52798d1a6e87916dc': 're3.jpg',
+'b395586dc81319132f9cc6551dd20c1c': 'fe1.jpg',
+'602130b340b5e60e958ee5ba13884dfa': 'fe2.jpg',
+'996b301116a56d2791f67214c8633f00': 'fe3.jpg',
+'d8b2de66bef2db271bb1d79afc679cad': 'gif-0602.jpg',
+'72e87334530a108d857cd70435e1b5ba': 'gif-0902.jpg',
+'de96167b446e781a6758b02b8a712ec3': 'gif-1102.jpg',
+
   // kit gennaio 2027 (09/01-21/01)
   '5b75a9718de2d227896e521073e958d5': 'k27-se1.jpg',
   '1ac0b93705b41f102e3f93b540af66bc': 'k27-se2.jpg',
